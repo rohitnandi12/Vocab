@@ -4,7 +4,14 @@
     "description" : "Vocab assistant",
     "manifest_version" : 2,
 
-    "permissions" : ["activeTab", "storage", "contextMenus"],
+    "permissions" : [
+        "activeTab",
+        "storage",
+        "contextMenus",
+        "tabs",
+  	    "notifications",
+  	    "http://api.wordnik.com:80/"
+    ],
     
     "browser_action" : {
         "default_popup" : "popup/popup.html",
