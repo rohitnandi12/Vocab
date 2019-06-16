@@ -10,7 +10,7 @@ let notify_m = (function(){
 			title: title,
 			message: msg,
 			priority: 1, //check more
-			iconUrl: 'images/get_started128.png'
+			iconUrl: '../images/get_started128.png'
 		};
 
 		chrome.notifications.create(name, opt, function(id){
@@ -27,7 +27,7 @@ let notify_m = (function(){
 *****************************************************/
 chrome.runtime.onMessage.addListener(function(msg, sender){
 	// First, validate message structure
-	if((msg.from === 'dialog') && (msg.subject === 'definition'){
+	if((msg.from === 'dialog') && (msg.subject === 'definition')){
 		let selected_word = JSON.parse(msg.data);
 		console.log(selected_word);
 		//add this word
@@ -36,7 +36,7 @@ chrome.runtime.onMessage.addListener(function(msg, sender){
 	}
 
 	if((msg.from === 'popup') && (msg.subject === 'definition')){
-		console.log('got message from popup'+msg.data):
+		console.log('got message from popup'+msg.data);
 		store_m.addWord(msg.data, undefined);
 		return;
 	}
