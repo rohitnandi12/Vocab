@@ -12,7 +12,7 @@ var storage_module = (function(){
                 // Add the word
                 let wordObj = {};
                 wordObj[word] = word;
-                chrome.storage.local.set(wordObj, function(){
+                chrome.storage.sync.set(wordObj, function(){
                     console.log("Word "+word+" successfully saved");
                 });
             }else{
