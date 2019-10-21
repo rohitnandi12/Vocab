@@ -25,15 +25,12 @@
     },
 
     "background" : {
-        "scripts": [
-            "res/jquery-3.4.1.min.js",
-            "db/db_master.js",
-            "utility/notification_master.js",
-             "background/background.js"
-        ],
+        "page" : "background/background.html",
         "persistent" : true
     },
-  
+
+    "options_page":"options/options.html",
+    
     "icons": {
         "16": "images/get_started16.png",
         "32": "images/get_started32.png",

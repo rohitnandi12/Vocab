@@ -12,17 +12,20 @@ var refresh_list = function () {
             displayStoredWords.appendChild(li);
         }
     });
+    
+    
 };
 
 let submitWord = document.getElementById('submitWord');
-// refresh_list();
+refresh_list();
 submitWord.onclick = function (element) {
 
     let word = document.getElementById('wordInput').value;
-    let meaning = document.getElementById('meaningInput').value;
     // Store word to db.
-    console.log(word+" : "+meaning);
-    storage_module.insertWord(word,meaning);
-    notify_module.notify("AddedWord",word,meaning);
-    //refresh_list();
+    storage_module.insertWord(word)
+    console.log("submitted word is "+word);
+    
+    refresh_list();
 };
+
+
