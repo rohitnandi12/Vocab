@@ -27,9 +27,9 @@
     "background" : {
         "scripts": [
             "res/jquery-3.4.1.min.js",
-            "db/db_master.js",
+            "db/db_chrome_storage.js",
             "utility/notification_master.js",
-             "background/background.js"
+            "background/background.js"
         ],
         "persistent" : true
     },

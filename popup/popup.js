@@ -20,6 +20,9 @@ submitWord.onclick = function (element) {
 
     let word = document.getElementById('wordInput').value;
     let meaning = document.getElementById('meaningInput').value;
+    //cleance word
+    word = word.trim().toLowerCase();
+    meaning = meaning.trim().toLowerCase();
     // Store word to db.
     console.log(word+" : "+meaning);
     storage_module.insertWord(word,meaning);
